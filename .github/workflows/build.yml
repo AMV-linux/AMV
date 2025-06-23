@@ -1,4 +1,4 @@
-name: AMV Build
+name: Build minimal Linux distro
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential libncurses-dev bison flex libssl-dev
+          sudo apt-get install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev
 
       - name: Download and build Linux kernel 6.15.3
         run: |
